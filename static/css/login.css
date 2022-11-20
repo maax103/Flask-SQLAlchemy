@@ -1,0 +1,77 @@
+:root{
+    --font-std: "LeagueSpartan", sans-serif;
+    --azul: #383750;
+    --cinza: #767686;
+    --laranja: #DF7E27;
+    --branco: #FEFEFE;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-std);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--azul)
+}
+h1{
+    margin-bottom: 4rem;
+    text-align: center;
+    color: var(--laranja);
+}
+#container{
+    min-height: 100vh;
+    display: flex;
+    padding: 1rem;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--cinza);
+    border-radius: 0;
+    border-top: none;
+    border-bottom: none;
+    background-color: var(--branco);
+}
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 700px;
+}
+
+form input{
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+form button{
+    border: none;
+    width: 100%;
+    background-color: var(--laranja);
+    color: white;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid var(--laranja);
+    transition: background-color, 0.2s;
+}
+form button:hover{
+    background-color: var(--branco);
+    color: var(--laranja);
+}
+label p {
+    margin-bottom: 0.5rem;
+    color: var(--cinza);
+}
+label{
+    width:100%;
+    text-align: center;
+}
