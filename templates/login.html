@@ -12,15 +12,21 @@
     <title>Home</title>
 </head>
 <body>
+    {% if Response == None %}
+    <script>
+        alert("Salvo com sucesso!")
+    </script>
+    {% endif %}
     <main>
         <div id="container">
         <h1>Flask + SQL-Alchemy</h1>
         <form action="http://localhost:3030/github" method="post">
             <label>
-                <p>Insira um usuário do Github</p>
+                <p>Insira um usuário</p>
                 <input type="text" name="username" id="username" placeholder="Github username">
             </label>
             <button type="submit">Localizar github</button>
+            <a href="/registros">Consultar banco de dados salvo</a>
         </form>
         </div>
     </main>

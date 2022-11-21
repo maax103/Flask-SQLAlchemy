@@ -17,19 +17,48 @@
             <h3>{{github['name']}}</h3>
             <img src={{github['avatar_url']}} />
             <p id="bio">{{github['bio']}}</p>
-            <div class="">
-            <div>
-            <p><span>{{github['public_repos']}} Repositórios</span></p>
-                <ul>
-                    {%for repo in repos%}
-                    <li>
-                        {{repo['name']}}
-                    </li>
-                    {% endfor %}
-                </ul>
+            <div id="gitinfo">
+                <div id="gitinfocol1">
+                <p><span>{{github['public_repos']}}</span> Repositórios</p>
+                    <ul>
+                        {%for repo in repos%}
+                        <li>
+                            {{repo['name']}}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div id="gitinfocol2">
+                    <div>
+                        <p><span>{{github['followers']}}</span> Seguidores</p>
+                        <ul>
+                            {%for repo in followers%}
+                            <li>
+                                {{repo['login']}}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div>
+                        <p><span>{{github['following']}}</span> Seguindo</p>
+                        <ul>
+                            {%for repo in following%}
+                            <li>
+                                {{repo['login']}}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <p><span>{{github['followers']}} Seguidores</span></p>
-            <p><span>{{github['following']}} Seguindo</span></p>
+            <div id="buttons">
+                <form action="http://localhost:3030/salvar/" method="post">
+                    <input type="hidden" name="github" value="{{github}}">
+                    <input type="hidden" name="followers" value="{{followers}}">
+                    <input type="hidden" name="following" value="{{following}}">
+                    <button type="submit">Salvar perfil</button>
+                </form>
+                <a href="/">Voltar</a>
             </div>
         </div>
     </main>

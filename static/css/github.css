@@ -4,6 +4,8 @@
     --cinza: #767686;
     --laranja: #DF7E27;
     --branco: #FEFEFE;
+    --cinza-claro: #F4F4F6;
+    --laranja-escuro: #A0581D;
 }
 *{
     margin: 0;
@@ -11,6 +13,7 @@
     font-family: var(--font-std);
     border-radius: 4px;
     box-sizing: border-box;
+    list-style-type: none;
 }
 main{
     min-height: 100vh;
@@ -25,10 +28,17 @@ h1{
     text-align: center;
     color: var(--laranja);
 }
+h3 {
+    font-size: 2rem;
+    margin: 1rem;
+}
+img {
+    max-width: 26rem;
+    border: 2px solid var(--laranja);
+}
 #container{
     min-height: 100vh;
     display: flex;
-    padding: 1rem;
     justify-content:center;
     flex-direction: column;
     align-items: center;
@@ -38,13 +48,13 @@ h1{
     border-bottom: none;
     background-color: var(--branco);
 }
-form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    min-width: 700px;
+#bio{
+    max-width: 500px;
+    padding: 1rem;
+    margin: 1rem;
+    font-style: italic;
+    color: var(--cinza);
 }
-
 form input{
     padding: 1rem;
     width: 100%;
@@ -55,7 +65,6 @@ form button{
     width: 100%;
     background-color: var(--laranja);
     color: white;
-    margin-top: 1rem;
     padding: 1rem;
     font-size: 1rem;
     font-weight: bold;
@@ -73,4 +82,98 @@ label p {
 label{
     width:100%;
     text-align: center;
+}
+#gitinfo{
+    background-color: var(--cinza-claro);
+    display: flex;
+    flex-direction: row;
+}
+#gitinfocol1, #gitinfocol2 div {
+    padding: 1rem;
+    margin: 1rem;
+    width: 300px;
+    min-height: calc(50%);
+    border: 1px solid var(--cinza);
+    background-color: var(--branco);
+}
+#gitinfocol2 div {
+    min-height: calc(50% - 3rem);
+}
+#gitinfocol2 div:first-child {
+    margin-bottom: 0;
+}
+#gitinfocol2 {
+    display: flex;
+    flex-direction: column;
+}
+#gitinfocol1 {
+    margin-right: 0;
+}
+#gitinfocol1 p, #gitinfocol2 p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+p span{
+    border: 2px solid var(--laranja);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+}
+#buttons {
+    background: var(--cinza-claro);
+    height: 15rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0;
+}
+form button {
+    color: var(--branco);
+    width: 9rem;
+    text-align: center;
+    background-color: var(--laranja);
+    padding: 1.3rem;
+    text-decoration: none;
+    border: 1px solid var(--laranja);
+    font-weight: bold;
+    transition: background-color, 0.2s;
+
+}
+form button:hover {
+    background-color: var(--branco);
+    color: var(--laranja);
+    transform: scale(1.05);
+}
+form button:active {
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+a:last-child, a:last-child:visited {
+    color: var(--branco);
+    background-color: var(--azul);
+    padding: 1.3rem;
+    text-decoration: none;
+    border: 1px solid var(--azul);
+    font-weight: bold;
+    transition: background-color, 0.2s;
+    margin-left: 4rem;
+}
+a:last-child:hover {
+    background-color: var(--branco);
+    color: var(--azul);
+    transform: scale(1.05);
+}
+a:last-child:active {
+    background-color: var(--azul);
+    color: var(--branco);
+}
+li {
+    padding: 0.2rem;
 }

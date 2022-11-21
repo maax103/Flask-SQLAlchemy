@@ -23,7 +23,7 @@ main{
 h1{
     margin-bottom: 4rem;
     text-align: center;
-    color: var(--laranja);
+    color: var(--azul);
 }
 #container{
     min-height: 100vh;
@@ -49,6 +49,7 @@ form input{
     padding: 1rem;
     width: 100%;
     text-align: center;
+    border: 1px solid var(--azul);
 }
 
 form button{
@@ -61,7 +62,8 @@ form button{
     font-size: 1rem;
     font-weight: bold;
     border: 2px solid var(--laranja);
-    transition: background-color, 0.2s;
+    transition: background-color, 0.2s, color, 0.2s;
+    cursor: pointer;
 }
 form button:hover{
     background-color: var(--branco);
@@ -74,4 +76,18 @@ label p {
 label{
     width:100%;
     text-align: center;
+}
+a, a:visited {
+    text-decoration: none;
+    margin-top: 5rem;
+    text-align: center;
+    border: 1px solid var(--azul);
+    padding: 1rem;
+    width: 100%;
+    color: var(--azul);
+    transition: background-color, 0.2s, color, 0.2s;
+}
+a:hover, a:visited:hover {
+    background-color: var(--azul);
+    color: var(--branco);
 }
