@@ -1,0 +1,1 @@
+Uma aplicação feita em Flask que buscar dados da API do Github e armazena em um banco de dados SQLite3 utilizando a lib SQL-Alchemy. 
